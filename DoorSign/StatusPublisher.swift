@@ -8,7 +8,7 @@ protocol StatusPublisher {
 }
 
 struct LogPublisher: StatusPublisher {
-    private let logger = Logger(subsystem: "com.company.teamstatus", category: "status")
+    private let logger = Logger(subsystem: "com.company.doorsign", category: "status")
 
     func publish(_ status: ResolvedStatus) {
         let source = status.source == .manual ? "manual" : "auto"

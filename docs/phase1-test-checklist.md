@@ -10,7 +10,7 @@ Two terminals, repo root:
 
 ```
 # terminal 1
-./scripts/build.sh && open build/Build/Products/Debug/TeamStatus.app
+./scripts/build.sh && open build/Build/Products/Debug/DoorSign.app
 
 # terminal 2
 ./scripts/watch-log.sh
@@ -34,8 +34,8 @@ not exactly 5. That is expected, not a bug.
 |---|---|---|
 | `MenuContentView.swift` | Added `import AppKit` | `NSApplication.shared.terminate` is AppKit. `import SwiftUI` re-exports it on most SDKs, but not reliably. One line, removes the risk. |
 | `CallDetector.swift` | Replaced `kCMIOObjectPropertyElementMain` with a local `CMIOObjectPropertyElement(0)` | CoreMediaIO never got CoreAudio's `Master` to `Main` rename, so that constant may not exist depending on the SDK. The element value is 0 in every version, so this is correct and compiles everywhere. |
-| `TeamStatus.xcodeproj` | `SWIFT_VERSION = 5.0` | See "Swift 6" below. |
-| `TeamStatus.xcodeproj` | `CODE_SIGN_IDENTITY = "-"` | Builds on any Mac without configuring a Developer ID team. Phase 6 replaces this. |
+| `DoorSign.xcodeproj` | `SWIFT_VERSION = 5.0` | See "Swift 6" below. |
+| `DoorSign.xcodeproj` | `CODE_SIGN_IDENTITY = "-"` | Builds on any Mac without configuring a Developer ID team. Phase 6 replaces this. |
 
 No other code was touched. `StatusEngine` still owns the priority rules,
 `CallDetector` and `SystemMonitor` still only read signals, `StatusPublisher`

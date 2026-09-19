@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct TeamStatusApp: App {
+struct DoorSignApp: App {
     @StateObject private var engine = StatusEngine()
 
     var body: some Scene {

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DEAD00000000000000000018 /* TeamStatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000011 /* TeamStatusApp.swift */; };
+		DEAD00000000000000000018 /* DoorSignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000011 /* DoorSignApp.swift */; };
 		DEAD00000000000000000019 /* MenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000012 /* MenuContentView.swift */; };
 		DEAD0000000000000000001A /* StatusEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000013 /* StatusEngine.swift */; };
 		DEAD0000000000000000001B /* CallDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000014 /* CallDetector.swift */; };
@@ -17,9 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DEAD00000000000000000003 /* TeamStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEAD00000000000000000003 /* DoorSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAD00000000000000000010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEAD00000000000000000011 /* TeamStatusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStatusApp.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000011 /* DoorSignApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorSignApp.swift; sourceTree = "<group>"; };
 		DEAD00000000000000000012 /* MenuContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentView.swift; sourceTree = "<group>"; };
 		DEAD00000000000000000013 /* StatusEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEngine.swift; sourceTree = "<group>"; };
 		DEAD00000000000000000014 /* CallDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetector.swift; sourceTree = "<group>"; };
@@ -42,15 +42,15 @@
 		DEAD00000000000000000004 = {
 			isa = PBXGroup;
 			children = (
-				DEAD00000000000000000005 /* TeamStatus */,
+				DEAD00000000000000000005 /* DoorSign */,
 				DEAD00000000000000000006 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DEAD00000000000000000005 /* TeamStatus */ = {
+		DEAD00000000000000000005 /* DoorSign */ = {
 			isa = PBXGroup;
 			children = (
-				DEAD00000000000000000011 /* TeamStatusApp.swift */,
+				DEAD00000000000000000011 /* DoorSignApp.swift */,
 				DEAD00000000000000000012 /* MenuContentView.swift */,
 				DEAD00000000000000000013 /* StatusEngine.swift */,
 				DEAD00000000000000000014 /* CallDetector.swift */,
@@ -59,13 +59,13 @@
 				DEAD00000000000000000017 /* Models.swift */,
 				DEAD00000000000000000010 /* Info.plist */,
 			);
-			path = TeamStatus;
+			path = DoorSign;
 			sourceTree = "<group>";
 		};
 		DEAD00000000000000000006 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DEAD00000000000000000003 /* TeamStatus.app */,
+				DEAD00000000000000000003 /* DoorSign.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,7 +73,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DEAD00000000000000000002 /* TeamStatus */ = {
+		DEAD00000000000000000002 /* DoorSign */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEAD0000000000000000000B;
 			buildPhases = (
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = TeamStatus;
-			productName = TeamStatus;
-			productReference = DEAD00000000000000000003 /* TeamStatus.app */;
+			name = DoorSign;
+			productName = DoorSign;
+			productReference = DEAD00000000000000000003 /* DoorSign.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DEAD00000000000000000002 /* TeamStatus */,
+				DEAD00000000000000000002 /* DoorSign */,
 			);
 		};
 /* End PBXProject section */
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEAD00000000000000000018 /* TeamStatusApp.swift in Sources */,
+				DEAD00000000000000000018 /* DoorSignApp.swift in Sources */,
 				DEAD00000000000000000019 /* MenuContentView.swift in Sources */,
 				DEAD0000000000000000001A /* StatusEngine.swift in Sources */,
 				DEAD0000000000000000001B /* CallDetector.swift in Sources */,
@@ -209,13 +209,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = TeamStatus/Info.plist;
+				INFOPLIST_FILE = DoorSign/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.company.teamstatus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.doorsign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -231,13 +231,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = TeamStatus/Info.plist;
+				INFOPLIST_FILE = DoorSign/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.company.teamstatus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.doorsign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -247,7 +247,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DEAD0000000000000000000A /* Build configuration list for PBXProject "TeamStatus" */ = {
+		DEAD0000000000000000000A /* Build configuration list for PBXProject "DoorSign" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DEAD0000000000000000000C /* Debug */,
@@ -256,7 +256,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DEAD0000000000000000000B /* Build configuration list for PBXNativeTarget "TeamStatus" */ = {
+		DEAD0000000000000000000B /* Build configuration list for PBXNativeTarget "DoorSign" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DEAD0000000000000000000E /* Debug */,

@@ -6,9 +6,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DEAD00000000000000000002"
-               BuildableName = "TeamStatus.app"
-               BlueprintName = "TeamStatus"
-               ReferencedContainer = "container:TeamStatus.xcodeproj">
+               BuildableName = "DoorSign.app"
+               BlueprintName = "DoorSign"
+               ReferencedContainer = "container:DoorSign.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -22,9 +22,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEAD00000000000000000002"
-            BuildableName = "TeamStatus.app"
-            BlueprintName = "TeamStatus"
-            ReferencedContainer = "container:TeamStatus.xcodeproj">
+            BuildableName = "DoorSign.app"
+            BlueprintName = "DoorSign"
+            ReferencedContainer = "container:DoorSign.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DEAD00000000000000000002"
-            BuildableName = "TeamStatus.app"
-            BlueprintName = "TeamStatus"
-            ReferencedContainer = "container:TeamStatus.xcodeproj">
+            BuildableName = "DoorSign.app"
+            BlueprintName = "DoorSign"
+            ReferencedContainer = "container:DoorSign.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
