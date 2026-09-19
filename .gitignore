@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Secrets (Phase 2 onward: Google OAuth client, Firebase config)
+*.p8
+*.p12
+*.mobileprovision
+GoogleService-Info.plist
+Secrets.xcconfig

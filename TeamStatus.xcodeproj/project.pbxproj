@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DEAD00000000000000000018 /* TeamStatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000011 /* TeamStatusApp.swift */; };
+		DEAD00000000000000000019 /* MenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000012 /* MenuContentView.swift */; };
+		DEAD0000000000000000001A /* StatusEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000013 /* StatusEngine.swift */; };
+		DEAD0000000000000000001B /* CallDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000014 /* CallDetector.swift */; };
+		DEAD0000000000000000001C /* SystemMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000015 /* SystemMonitor.swift */; };
+		DEAD0000000000000000001D /* StatusPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000016 /* StatusPublisher.swift */; };
+		DEAD0000000000000000001E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000017 /* Models.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DEAD00000000000000000003 /* TeamStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEAD00000000000000000010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEAD00000000000000000011 /* TeamStatusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStatusApp.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000012 /* MenuContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentView.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000013 /* StatusEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusEngine.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000014 /* CallDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDetector.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000015 /* SystemMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitor.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000016 /* StatusPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPublisher.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000017 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEAD00000000000000000008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DEAD00000000000000000004 = {
+			isa = PBXGroup;
+			children = (
+				DEAD00000000000000000005 /* TeamStatus */,
+				DEAD00000000000000000006 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEAD00000000000000000005 /* TeamStatus */ = {
+			isa = PBXGroup;
+			children = (
+				DEAD00000000000000000011 /* TeamStatusApp.swift */,
+				DEAD00000000000000000012 /* MenuContentView.swift */,
+				DEAD00000000000000000013 /* StatusEngine.swift */,
+				DEAD00000000000000000014 /* CallDetector.swift */,
+				DEAD00000000000000000015 /* SystemMonitor.swift */,
+				DEAD00000000000000000016 /* StatusPublisher.swift */,
+				DEAD00000000000000000017 /* Models.swift */,
+				DEAD00000000000000000010 /* Info.plist */,
+			);
+			path = TeamStatus;
+			sourceTree = "<group>";
+		};
+		DEAD00000000000000000006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEAD00000000000000000003 /* TeamStatus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEAD00000000000000000002 /* TeamStatus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEAD0000000000000000000B;
+			buildPhases = (
+				DEAD00000000000000000007 /* Sources */,
+				DEAD00000000000000000008 /* Frameworks */,
+				DEAD00000000000000000009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeamStatus;
+			productName = TeamStatus;
+			productReference = DEAD00000000000000000003 /* TeamStatus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEAD00000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					DEAD00000000000000000002 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = DEAD0000000000000000000A;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEAD00000000000000000004;
+			productRefGroup = DEAD00000000000000000006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEAD00000000000000000002 /* TeamStatus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEAD00000000000000000009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEAD00000000000000000007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEAD00000000000000000018 /* TeamStatusApp.swift in Sources */,
+				DEAD00000000000000000019 /* MenuContentView.swift in Sources */,
+				DEAD0000000000000000001A /* StatusEngine.swift in Sources */,
+				DEAD0000000000000000001B /* CallDetector.swift in Sources */,
+				DEAD0000000000000000001C /* SystemMonitor.swift in Sources */,
+				DEAD0000000000000000001D /* StatusPublisher.swift in Sources */,
+				DEAD0000000000000000001E /* Models.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DEAD0000000000000000000C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DEAD0000000000000000000D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		DEAD0000000000000000000E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TeamStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.teamstatus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DEAD0000000000000000000F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TeamStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.company.teamstatus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEAD0000000000000000000A /* Build configuration list for PBXProject "TeamStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEAD0000000000000000000C /* Debug */,
+				DEAD0000000000000000000D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEAD0000000000000000000B /* Build configuration list for PBXNativeTarget "TeamStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEAD0000000000000000000E /* Debug */,
+				DEAD0000000000000000000F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = DEAD00000000000000000001 /* Project object */;
+}
