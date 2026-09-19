@@ -3,6 +3,7 @@ import SwiftUI
 
 struct MenuContentView: View {
     @EnvironmentObject private var engine: StatusEngine
+    @EnvironmentObject private var auth: GoogleAuth
 
     @State private var duration: ManualDuration = .oneHour
     @State private var customText = ""
@@ -23,6 +24,8 @@ struct MenuContentView: View {
                 signalsSection.padding(.top, 6)
             }
             Divider()
+            account
+            Divider()
             HStack {
                 Spacer()
                 Button("Quit") { NSApplication.shared.terminate(nil) }
@@ -30,6 +33,43 @@ struct MenuContentView: View {
         }
         .padding(14)
         .frame(width: 320)
+    }
+
+    // MARK: Google account
+
+    private var account: some View {
+        HStack(spacing: 8) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Google account").font(.subheadline).foregroundStyle(.secondary)
+                Text(accountText).font(.caption).foregroundStyle(accountIsError ? .red : .secondary)
+            }
+            Spacer(minLength: 0)
+            switch auth.state {
+            case .signedIn:
+                Button("Sign out") { auth.signOut() }
+            case .signingIn:
+                ProgressView().controlSize(.small)
+            case .signedOut, .failed:
+                Button("Sign in") { auth.signIn() }
+            case .notConfigured:
+                EmptyView()
+            }
+        }
+    }
+
+    private var accountText: String {
+        switch auth.state {
+        case .notConfigured: return "Not configured for this build"
+        case .signedOut:     return "Not signed in"
+        case .signingIn:     return "Opening your browser"
+        case .signedIn(let email): return email
+        case .failed(let message):  return message
+        }
+    }
+
+    private var accountIsError: Bool {
+        if case .failed = auth.state { return true }
+        return false
     }
 
     // MARK: Current status

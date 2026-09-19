@@ -14,6 +14,8 @@
 		DEAD0000000000000000001C /* SystemMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000015 /* SystemMonitor.swift */; };
 		DEAD0000000000000000001D /* StatusPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000016 /* StatusPublisher.swift */; };
 		DEAD0000000000000000001E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000017 /* Models.swift */; };
+		DEAD00000000000000000043 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000041 /* AppConfig.swift */; };
+		DEAD00000000000000000044 /* GoogleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000042 /* GoogleAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		DEAD00000000000000000015 /* SystemMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitor.swift; sourceTree = "<group>"; };
 		DEAD00000000000000000016 /* StatusPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPublisher.swift; sourceTree = "<group>"; };
 		DEAD00000000000000000017 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000041 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000042 /* GoogleAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuth.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000040 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 		DEAD00000000000000000004 = {
 			isa = PBXGroup;
 			children = (
+				DEAD00000000000000000040 /* Secrets.xcconfig */,
 				DEAD00000000000000000005 /* DoorSign */,
 				DEAD00000000000000000006 /* Products */,
 			);
@@ -51,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				DEAD00000000000000000011 /* DoorSignApp.swift */,
+				DEAD00000000000000000045 /* Auth */,
 				DEAD00000000000000000012 /* MenuContentView.swift */,
 				DEAD00000000000000000013 /* StatusEngine.swift */,
 				DEAD00000000000000000014 /* CallDetector.swift */,
@@ -68,6 +75,15 @@
 				DEAD00000000000000000003 /* DoorSign.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DEAD00000000000000000045 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DEAD00000000000000000041 /* AppConfig.swift */,
+				DEAD00000000000000000042 /* GoogleAuth.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAD00000000000000000018 /* DoorSignApp.swift in Sources */,
+				DEAD00000000000000000043 /* AppConfig.swift in Sources */,
+				DEAD00000000000000000044 /* GoogleAuth.swift in Sources */,
 				DEAD00000000000000000019 /* MenuContentView.swift in Sources */,
 				DEAD0000000000000000001A /* StatusEngine.swift in Sources */,
 				DEAD0000000000000000001B /* CallDetector.swift in Sources */,
@@ -202,6 +220,7 @@
 		};
 		DEAD0000000000000000000E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEAD00000000000000000040 /* Secrets.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -224,6 +243,7 @@
 		};
 		DEAD0000000000000000000F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEAD00000000000000000040 /* Secrets.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
