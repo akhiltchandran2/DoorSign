@@ -16,4 +16,4 @@ echo
 echo "Built: $APP"
 echo "Run it with:  open \"$APP\""
 echo "Watch status changes with:"
-echo "  log stream --predicate 'subsystem == \"com.company.doorsign\"' --level info"
+echo "  log stream --predicate 'subsystem == \"com.qburst.doorsign\"' --level info"

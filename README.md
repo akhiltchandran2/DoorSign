@@ -52,10 +52,10 @@ No permission prompts are expected. The app only reads whether the mic or camera
 
 ## Viewing status changes
 
-Open Console.app, filter by subsystem `com.company.doorsign`, or run:
+Open Console.app, filter by subsystem `com.qburst.doorsign`, or run:
 
 ```
-log stream --predicate 'subsystem == "com.company.doorsign"' --level info
+log stream --predicate 'subsystem == "com.qburst.doorsign"' --level info
 ```
 
 ## Test checklist
