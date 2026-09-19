@@ -51,6 +51,12 @@ final class StatusEngine: ObservableObject {
         readSignals()
         evaluate(immediate: true)
 
+        // Always publish once at launch. `commit` skips a status equal to the
+        // seeded one, so an app that starts Available would otherwise log
+        // nothing at all, and there is no window or Dock icon to tell you it
+        // is alive.
+        publisher.publish(current)
+
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
             Task { @MainActor in
                 self?.readSignals()
