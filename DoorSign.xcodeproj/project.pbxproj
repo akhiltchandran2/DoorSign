@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D58F10B330602C1B0043FBFB /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = D58F10B230602C1B0043FBFB /* GoogleSignIn */; };
+		D58F10B530602C1B0043FBFB /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D58F10B430602C1B0043FBFB /* GoogleSignInSwift */; };
 		DEAD00000000000000000018 /* DoorSignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000011 /* DoorSignApp.swift */; };
 		DEAD00000000000000000019 /* MenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000012 /* MenuContentView.swift */; };
 		DEAD0000000000000000001A /* StatusEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD00000000000000000013 /* StatusEngine.swift */; };
@@ -28,9 +30,9 @@
 		DEAD00000000000000000015 /* SystemMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitor.swift; sourceTree = "<group>"; };
 		DEAD00000000000000000016 /* StatusPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPublisher.swift; sourceTree = "<group>"; };
 		DEAD00000000000000000017 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		DEAD00000000000000000040 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		DEAD00000000000000000041 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		DEAD00000000000000000042 /* GoogleAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuth.swift; sourceTree = "<group>"; };
-		DEAD00000000000000000040 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58F10B330602C1B0043FBFB /* GoogleSignIn in Frameworks */,
+				D58F10B530602C1B0043FBFB /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +95,7 @@
 /* Begin PBXNativeTarget section */
 		DEAD00000000000000000002 /* DoorSign */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DEAD0000000000000000000B;
+			buildConfigurationList = DEAD0000000000000000000B /* Build configuration list for PBXNativeTarget "DoorSign" */;
 			buildPhases = (
 				DEAD00000000000000000007 /* Sources */,
 				DEAD00000000000000000008 /* Frameworks */,
@@ -102,6 +106,10 @@
 			dependencies = (
 			);
 			name = DoorSign;
+			packageProductDependencies = (
+				D58F10B230602C1B0043FBFB /* GoogleSignIn */,
+				D58F10B430602C1B0043FBFB /* GoogleSignInSwift */,
+			);
 			productName = DoorSign;
 			productReference = DEAD00000000000000000003 /* DoorSign.app */;
 			productType = "com.apple.product-type.application";
@@ -121,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DEAD0000000000000000000A;
+			buildConfigurationList = DEAD0000000000000000000A /* Build configuration list for PBXProject "DoorSign" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,6 +138,9 @@
 				Base,
 			);
 			mainGroup = DEAD00000000000000000004;
+			packageReferences = (
+				D58F10B130602C1B0043FBFB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = DEAD00000000000000000006 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -179,19 +190,19 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				SDKROOT = macosx;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -207,13 +218,13 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				SDKROOT = macosx;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -287,6 +298,29 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		D58F10B130602C1B0043FBFB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D58F10B230602C1B0043FBFB /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D58F10B130602C1B0043FBFB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		D58F10B430602C1B0043FBFB /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D58F10B130602C1B0043FBFB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DEAD00000000000000000001 /* Project object */;
 }
