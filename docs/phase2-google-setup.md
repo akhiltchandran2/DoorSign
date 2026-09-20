@@ -4,27 +4,90 @@ Code for slice 2a is committed. It will not run until the two setup steps
 below are done. Until then the panel shows "Not configured for this build"
 and no sign-in button, which is the intended behaviour, not a failure.
 
-## 1. Google Cloud, once per organization
+## 1. Google Cloud
 
-Needs someone who can create a project inside QBurst's Workspace org.
+### Blocked: project creation is restricted at QBurst
 
-1. **Create a Google Cloud project** inside the QBurst organization. It must
-   be in the org, not a personal account, or step 2 cannot be set to Internal.
-2. **OAuth consent screen: User Type = Internal.** This matters. Internal
-   limits sign-in to qburst.com accounts and skips Google's verification
-   review. External with a sensitive scope means weeks of review.
-3. **Enable the Google Chat API.** Add the Google Calendar API too if you
+Creating the project from a normal work account fails with:
+
+```
+You do not have the required "resourcemanager.projects.create"
+permission to create projects in this location.
+```
+
+This appears for both the qburst.com organization and "No organization", so
+it is an account permission, not an organization setting. QBurst has Cloud
+project creation locked down. Nobody on the team can work around this from
+the console. An admin has to act.
+
+The qburst.com organization is also not visible in the parent resource
+picker, which means either it does not exist or the account cannot see it.
+The admin request below covers both cases.
+
+### What to ask the Cloud or Workspace admin
+
+> We are building DoorSign, an internal macOS menubar app that sets a
+> person's Google Chat status automatically from signals on their own Mac.
+> It needs a Google Cloud project and an OAuth client.
+>
+> I cannot create the project myself:
+> `resourcemanager.projects.create` is denied for my account, under the
+> qburst.com organization and under "No organization".
+>
+> Three things, in order of preference:
+>
+> 1. Does QBurst have a Google Cloud organization for qburst.com? If so,
+>    either grant me `roles/resourcemanager.projectCreator` on it, or create
+>    a project named DoorSign under it and grant me Owner or Editor.
+> 2. The OAuth consent screen must be set to **Internal**, so sign-in is
+>    limited to qburst.com accounts. Internal also avoids Google's
+>    verification review, which External would require for the scope below
+>    and takes weeks.
+> 3. We need the Google Chat API enabled, and the OAuth client allowlisted
+>    for Workspace API access if third-party app access is restricted. The
+>    scope is `chat.users.availability`, which only lets the app set the
+>    signed-in person's own Chat status. It reads no messages and no spaces.
+
+Why Internal matters, if they push back on it:
+
+| | Internal, under the org | External, in Testing |
+|---|---|---|
+| Google verification | Not needed | Not needed |
+| Who can sign in | Everyone at qburst.com | Only listed test users, max 100 |
+| Consent warning | None | "Unverified app" |
+| Refresh token life | Normal | **7 days for sensitive scopes** |
+
+That last row rules External out for a real rollout. Everyone would have to
+sign in again every week.
+
+### Once the project exists
+
+1. **Enable the Google Chat API.** Add the Google Calendar API too if you
    want it ready for slice 2c.
-4. **Create an OAuth client** under APIs & Services > Credentials. Pick the
-   Apple application type (the console may label it iOS, and group macOS with
-   it; take the macOS option if offered separately). Bundle ID is
-   `com.qburst.doorsign`, which is why we settled that first.
-5. **Copy both values** from the client: the client ID, and the reversed
+2. **Create an OAuth client** under APIs & Services > Credentials. Pick the
+   Apple application type (the console may label it iOS, and group macOS
+   with it; take the macOS option if offered separately). Bundle ID is
+   `com.qburst.doorsign`.
+3. **Copy both values** from the client: the client ID, and the reversed
    client ID used as the callback URL scheme.
 
-**Ask your Workspace admin early.** Admins can restrict which third-party
-apps reach Workspace data. If QBurst has that locked down, the app is blocked
-until the client is allowlisted, and that is measured in days, not minutes.
+### Optional while you wait: prove the sign-in plumbing
+
+Slice 2a's real unknown is whether the Google consent window behaves in an
+agent app that owns no window of its own. That question has nothing to do
+with QBurst's Workspace, so it can be answered with a throwaway project on a
+personal Google account, which has no such restriction.
+
+Create a project there, set the consent screen to External in Testing, add
+yourself as a test user, and create an OAuth client for
+`com.qburst.doorsign`. Put those values in `Secrets.xcconfig`. Signing in
+then exercises the exact code path: the window anchor, the browser handoff,
+the keychain restore on relaunch.
+
+This proves the plumbing only. Do not point it at anything work related, and
+do not use it for slice 2b, because Chat availability is a Workspace feature.
+When the real project lands, swap the two values in `Secrets.xcconfig`. No
+code changes.
 
 ## 2. On your Mac, once per clone
 
@@ -77,15 +140,16 @@ rebuild.
 
 ## Checklist
 
-| # | Step | Done |
-|---|---|---|
-| 1 | Cloud project created in the QBurst org | |
-| 2 | Consent screen set to Internal | |
-| 3 | Chat API enabled | |
-| 4 | OAuth client created for `com.qburst.doorsign` | |
-| 5 | Workspace admin has allowlisted the client, if required | |
-| 6 | `Secrets.xcconfig` filled in | |
-| 7 | GoogleSignIn package added to the target | |
-| 8 | Builds, panel shows "Not signed in" | |
-| 9 | Sign in works, email appears | |
-| 10 | Quit and relaunch, still signed in | |
+| # | Step | Done | Owner |
+|---|---|---|---|
+| 1 | Admin asked about the Cloud organization and project creation | | you |
+| 2 | Project created, under the qburst.com org if one exists | | admin |
+| 3 | Consent screen set to Internal | | admin |
+| 4 | Chat API enabled | | either |
+| 5 | OAuth client created for `com.qburst.doorsign` | | either |
+| 6 | Client allowlisted for Workspace API access, if required | | admin |
+| 7 | `Secrets.xcconfig` filled in | | you |
+| 8 | GoogleSignIn package added to the target | | done |
+| 9 | Builds, panel shows "Not signed in" | | you |
+| 10 | Sign in works, email appears | | you |
+| 11 | Quit and relaunch, still signed in | | you |
